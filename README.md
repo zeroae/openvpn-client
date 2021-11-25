@@ -269,3 +269,11 @@ but adding your vpn user and password by command line
 
 If you have any problems with or questions about this image, please contact me
 through a [GitHub issue](https://github.com/dperson/openvpn-client/issues).
+
+## Release
+Following the [Multi-arch Build the easy way](https://www.docker.com/blog/multi-arch-build-and-images-the-simple-way/)
+
+    docker buildx build \
+        --push \
+        --platform linux/arm/v7,linux/arm64/v8,linux/amd64 \ 
+        --tag dperson/openvpn-client .
